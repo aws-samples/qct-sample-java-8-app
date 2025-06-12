@@ -33,7 +33,7 @@ public class DownloadController {
 	@RequestMapping(method = {GET, HEAD}, value = "/{uuid}")
 	public ResponseEntity<Resource> redirect(
 			HttpMethod method,
-			@PathVariable UUID uuid,
+			@PathVariable("uuid") UUID uuid,
 			@RequestHeader(IF_NONE_MATCH) Optional<String> requestEtagOpt,
 			@RequestHeader(IF_MODIFIED_SINCE) Optional<Date> ifModifiedSinceOpt
 			) {
@@ -45,7 +45,7 @@ public class DownloadController {
 	@RequestMapping(method = {GET, HEAD}, value = "/{uuid}/{filename}")
 	public ResponseEntity<Resource> download(
 			HttpMethod method,
-			@PathVariable UUID uuid,
+			@PathVariable("uuid") UUID uuid,
 			@RequestHeader(IF_NONE_MATCH) Optional<String> requestEtagOpt,
 			@RequestHeader(IF_MODIFIED_SINCE) Optional<Date> ifModifiedSinceOpt
 			) {
