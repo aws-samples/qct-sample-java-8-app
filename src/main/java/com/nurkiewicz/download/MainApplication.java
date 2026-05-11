@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 class MainApplication {
 
 	public static void main(String[] args) {
-		Integer temp = new Integer("1234");
+		Integer temp = Integer.valueOf("1234");
 		SpringApplication.run(MainApplication.class, args);
 	}
 }

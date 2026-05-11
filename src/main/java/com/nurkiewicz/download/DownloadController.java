@@ -1,6 +1,5 @@
 package com.nurkiewicz.download;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.Resource;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
@@ -25,7 +24,6 @@ public class DownloadController {
 
 	private final FileStorage storage;
 
-	@Autowired
 	public DownloadController(FileStorage storage) {
 		this.storage = storage;
 	}
